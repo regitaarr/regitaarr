@@ -1,14 +1,117 @@
-name: Test Workflow
+name: 🎮 Rock Paper Scissors Game - Simple
 
 on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
-  test:
+  play-game:
+    if: |
+      contains(github.event.issue.title, '🗿') || 
+      contains(github.event.issue.title, '📄') || 
+      contains(github.event.issue.title, '✂️')
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Test
+    - name: Debug Issue Info
       run: |
-        echo "Workflow is working!"
-        echo "Issue title: ${{ github.event.issue.title }}"
+        echo "Issue Title: ${{ github.event.issue.title }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Issue Number: ${{ github.event.issue.number }}"
+        
+    - name: Play Rock Paper Scissors
+      id: game
+      run: |
+        # Determine player choice
+        TITLE="${{ github.event.issue.title }}"
+        if [[ "$TITLE" == *"🗿"* ]]; then
+          PLAYER_CHOICE="rock"
+          PLAYER_EMOJI="🗿"
+          PLAYER_NAME="ROCK"
+        elif [[ "$TITLE" == *"📄"* ]]; then
+          PLAYER_CHOICE="paper"
+          PLAYER_EMOJI="📄"
+          PLAYER_NAME="PAPER"
+        elif [[ "$TITLE" == *"✂️"* ]]; then
+          PLAYER_CHOICE="scissors"
+          PLAYER_EMOJI="✂️"
+          PLAYER_NAME="SCISSORS"
+        else
+          echo "No valid choice found in title"
+          exit 1
+        fi
+        
+        # Computer makes random choice
+        CHOICES=("rock" "paper" "scissors")
+        EMOJIS=("🗿" "📄" "✂️")
+        NAMES=("ROCK" "PAPER" "SCISSORS")
+        
+        RANDOM_INDEX=$((RANDOM % 3))
+        COMPUTER_CHOICE=${CHOICES[$RANDOM_INDEX]}
+        COMPUTER_EMOJI=${EMOJIS[$RANDOM_INDEX]}
+        COMPUTER_NAME=${NAMES[$RANDOM_INDEX]}
+        
+        echo "Player: $PLAYER_NAME, Computer: $COMPUTER_NAME"
+        
+        # Determine winner
+        if [[ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]]; then
+          RESULT="DRAW"
+          RESULT_EMOJI="🤝"
+          RESULT_MESSAGE="It's a tie! Great minds think alike!"
+        elif [[ 
+          ("$PLAYER_CHOICE" == "rock" && "$COMPUTER_CHOICE" == "scissors") ||
+          ("$PLAYER_CHOICE" == "paper" && "$COMPUTER_CHOICE" == "rock") ||
+          ("$PLAYER_CHOICE" == "scissors" && "$COMPUTER_CHOICE" == "paper")
+        ]]; then
+          RESULT="WIN"
+          RESULT_EMOJI="🎉"
+          RESULT_MESSAGE="🎉 **CONGRATULATIONS!** 🎉 You won this round!"
+        else
+          RESULT="LOSE"
+          RESULT_EMOJI="💔"
+          RESULT_MESSAGE="💔 **OOPS!** 💔 Computer wins this time. Try again!"
+        fi
+        
+        # Store results for next step
+        echo "player_emoji=$PLAYER_EMOJI" >> $GITHUB_OUTPUT
+        echo "player_name=$PLAYER_NAME" >> $GITHUB_OUTPUT
+        echo "computer_emoji=$COMPUTER_EMOJI" >> $GITHUB_OUTPUT
+        echo "computer_name=$COMPUTER_NAME" >> $GITHUB_OUTPUT
+        echo "result_emoji=$RESULT_EMOJI" >> $GITHUB_OUTPUT
+        echo "result_message=$RESULT_MESSAGE" >> $GITHUB_OUTPUT
+        echo "result=$RESULT" >> $GITHUB_OUTPUT
+        
+    - name: Comment on issue
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        COMMENT="## 🎮 Game Result
+
+        | 👤 Player | 🆚 | 🤖 Computer |
+        |:---------:|:--:|:-----------:|
+        | ${{ steps.game.outputs.player_emoji }} **${{ steps.game.outputs.player_name }}** | vs | ${{ steps.game.outputs.computer_emoji }} **${{ steps.game.outputs.computer_name }}** |
+        
+        ### ${{ steps.game.outputs.result_emoji }} ${{ steps.game.outputs.result_message }}
+        
+        **Thanks for playing! 🎮**"
+        
+        curl -X POST \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
+          -d "{\"body\":\"$COMMENT\"}"
+          
+    - name: Close issue after delay
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        sleep 10
+        curl -X PATCH \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
+          -d '{"state":"closed"}'
