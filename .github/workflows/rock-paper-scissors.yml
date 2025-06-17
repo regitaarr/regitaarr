@@ -7,8 +7,6 @@ on:
 permissions:
   issues: write
   contents: read
-  pull-requests: write
-  actions: read
 
 jobs:
   play-game:
