@@ -155,7 +155,7 @@ class MobileDev {
 - Score tracking
 - Responsive controls
 
-**🚀 [Play Now →](https://regitarr.github.io/snake-game/)**
+**🚀 [Play Now →](https://regitaarr.github.io/snake-game/)**
 
 *Built with vanilla JS & HTML5 Canvas*
 
