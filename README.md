@@ -119,65 +119,6 @@ class MobileDev {
 
 ---
 
-<details>
-<summary>📚 <b>Project Categories</b></summary>
-
-### 🎮 **Games & Interactive**
-- Rock Paper Scissors Game
-- Snake Game HTML5
-
-### 🏢 **Business Applications**
-- Penerimaan Karyawan System
-- SISTEM SMTOWN APP
-- Manajemen Data Toko
-
-### 📱 **Mobile Applications**
-- Smart Presence System
-- Kawaii Ramen Restaurant App
-- SiKerja Work Safety App
-
-### 🌐 **Web Development**
-- Personal Profile Websites
-- Community Management (RW Hub)
-- E-commerce Platforms
-
-### 🔧 **System & Utilities**
-- Data Structure Implementations
-- OTP Integration System
-- Inventory Management
-
-</details>
-
----
-
-<div align="center">
-
-### 💫 **Code Philosophy**
-
-```javascript
-const developer = {
-    name: "regitaarr",
-    motto: "Clean code, creative solutions",
-    languages: ["Python", "Dart", "JavaScript", "PHP", "HTML", "CSS"],
-    approach: "Learn by building, improve by refactoring",
-    goal: "Making technology accessible and beautiful"
-};
-
-console.log("Every line of code tells a story 📖✨");
-```
-
-</div>
-
----
-
-<div align="center">
-
-*Built with passion, powered by curiosity* 🚀💖
-
-**[📈 View All Projects](https://github.com/regitaarr?tab=repositories) • [🌟 Follow Journey](https://github.com/regitaarr) • [📫 Let's Connect](https://instagram.com/regitaarr)**
-
-</div>
-
 # 🎮 Mini Games Collection
 
 > *"Code is poetry, games are the rhythm"* ✨
@@ -260,9 +201,47 @@ console.log("Every line of code tells a story 📖✨");
 
 ---
 
+<details>
+<summary>📚 <b>Project Categories</b></summary>
+
+### 🎮 **Games & Interactive**
+- 🐍 **Snake Game** - Classic arcade game with HTML5 Canvas
+- ✂️ **Rock Paper Scissors** - Modern UI game with animations
+
+### 🏢 **Business Applications**
+- 🏢 **Penerimaan Karyawan** - HR Management System (Python)
+- 🛍️ **SISTEM SMTOWN APP** - E-commerce Platform (Python)
+- 🏪 **Manajemen Data Toko** - Store Management System (PHP)
+
+### 📱 **Mobile Applications**
+- ✅ **Smart Presence** - Attendance System (Flutter)
+- 🍜 **Kawaii Ramen** - Restaurant App (Flutter)
+- 🛡️ **SiKerja App** - Safety Management (Flutter)
+- 💬 **OTP Fonnte** - SMS Integration (PHP)
+
+### 🌐 **Web Development**
+- 👤 **Jennie Profile** - Personal Website (HTML/CSS)
+- 🎤 **YG Entertainment** - Company Profile (CSS)
+- 🏘️ **RW Hub** - Community Management (PHP)
+- 🍜 **SVT Store** - Album Shop Website (HTML)
+- 👥 **I/O Data Penduduk** - Population Data System (JavaScript)
+
+### 🔧 **System & Utilities**
+- 📊 **SITORSI-SDA** - Inventory Management (Python)
+- 📋 **GUI Program** - Data Structure Practice (Python)
+- 🏗️ **SIKERJA** - UI Design (OOP Technology)
+
+</details>
+
+---
+
 <div align="center">
 
-*Made with 💖 and lots of ☕*
+### 🌟 **GitHub Activity**
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=regitaarr&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&icon_color=F85D7F&text_color=FFFFFF)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=regitaarr&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&text_color=FFFFFF)
 
 </div>
 
@@ -270,12 +249,47 @@ console.log("Every line of code tells a story 📖✨");
 
 <div align="center">
 
+### 💫 **Code Philosophy**
+
 ```javascript
 const developer = {
     name: "regitaarr",
+    motto: "Clean code, creative solutions",
+    languages: ["Python", "Dart", "JavaScript", "PHP", "HTML", "CSS"],
+    approach: "Learn by building, improve by refactoring",
+    goal: "Making technology accessible and beautiful",
     passion: ["coding", "gaming", "creating"],
-    motto: "Life is a game, code is the cheat code! 🎮✨"
+    quote: "Life is a game, code is the cheat code! 🎮✨"
 };
+
+console.log("Every line of code tells a story 📖✨");
 ```
+
+</div>
+
+---
+
+<div align="center">
+
+*Built with passion, powered by curiosity* 🚀💖
+
+**Made with 💖 and lots of ☕**
+
+**[📈 View All Projects](https://github.com/regitaarr?tab=repositories) • [🌟 Follow Journey](https://github.com/regitaarr) • [📫 Let's Connect](https://instagram.com/regitaarr)**
+
+</div>
+
+---
+
+<div align="center">
+
+### 🔥 **Fun Facts**
+
+- 🎓 Student at **Universitas Teknologi Yogyakarta**
+- 📍 Based in **Ciamis, Indonesia**
+- 🎯 Currently exploring **Mobile Development** with Flutter
+- 🌱 Always learning new technologies and frameworks
+- 🎮 I like playing mobile legends, this is my ID 1275866107. Let's play together
+- ⚡ Fun fact: I speak multiple programming languages fluently and I can speak 2 regional languages, namely Sundanese and Javanese!
 
 </div>
