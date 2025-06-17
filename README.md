@@ -84,23 +84,9 @@
 
 *Made with 💖 and lots of ☕*
 
-**[⭐ Star this repo](https://github.com/regitaarr) • [🐛 Report bugs](https://github.com/regitaarr/issues) • [💡 Request features](https://github.com/regitaarr/discussions)**
-
 </div>
 
 ---
-
-<details>
-<summary>🔮 <b>Coming Soon...</b></summary>
-
-- 🎯 **Tic Tac Toe** - AI vs Human battle
-- 🧩 **2048** - Number sliding puzzle
-- 🏓 **Pong** - Classic arcade game
-- 🎨 **Memory Game** - Card matching challenge
-
-*Stay tuned for more awesome games!* 🚀
-
-</details>
 
 <div align="center">
 
