@@ -12,11 +12,11 @@ Mainkan game langsung di profil GitHub! Klik salah satu pilihan di bawah:
 
 ## 🗿📄✂️ Pilih Senjata Anda!
 
-[![Rock](https://img.shields.io/badge/🗿_ROCK-Click_to_Play-ff6b6b?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=🗿%20Rock%20vs%20Computer&body=**Anda%20memilih%3A%20🗿%20ROCK**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
+[![Rock](https://img.shields.io/badge/🗿_ROCK-Click_to_Play-ff6b6b?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitaarr/regitaarr/issues/new?title=🗿%20Rock%20vs%20Computer&body=**Anda%20memilih%3A%20🗿%20ROCK**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
 
-[![Paper](https://img.shields.io/badge/📄_PAPER-Click_to_Play-4ecdc4?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=📄%20Paper%20vs%20Computer&body=**Anda%20memilih%3A%20📄%20PAPER**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
+[![Paper](https://img.shields.io/badge/📄_PAPER-Click_to_Play-4ecdc4?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitaarr/regitaarr/issues/new?title=📄%20Paper%20vs%20Computer&body=**Anda%20memilih%3A%20📄%20PAPER**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
 
-[![Scissors](https://img.shields.io/badge/✂️_SCISSORS-Click_to_Play-f39c12?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=✂️%20Scissors%20vs%20Computer&body=**Anda%20memilih%3A%20✂️%20SCISSORS**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
+[![Scissors](https://img.shields.io/badge/✂️_SCISSORS-Click_to_Play-f39c12?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitaarr/regitaarr/issues/new?title=✂️%20Scissors%20vs%20Computer&body=**Anda%20memilih%3A%20✂️%20SCISSORS**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*GitHub%20Action%20akan%20otomatis%20memproses%20game%20ini!*%0A%0A**Tunggu%20sebentar%20untuk%20melihat%20hasilnya...**%0A%0A---%0A%0A**Game%20Stats%20akan%20diupdate%20otomatis**)
 
 </div>
 
