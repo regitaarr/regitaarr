@@ -4,6 +4,10 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   play-game:
     if: |
@@ -14,13 +18,8 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        
     - name: Play Rock Paper Scissors
       id: game
       run: |
@@ -54,7 +53,7 @@ jobs:
         if [[ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]]; then
           RESULT="DRAW"
           RESULT_EMOJI="🤝"
-          RESULT_MESSAGE="It's a tie! Great minds think alike! 🤝"
+          RESULT_MESSAGE="It's a tie! Great minds think alike!"
         elif [[ 
           ("$PLAYER_CHOICE" == "rock" && "$COMPUTER_CHOICE" == "scissors") ||
           ("$PLAYER_CHOICE" == "paper" && "$COMPUTER_CHOICE" == "rock") ||
@@ -73,11 +72,15 @@ jobs:
         cat > game_result.md << EOF
         ## 🎮 Game Result
         
-        | Player | vs | Computer |
-        |:------:|:--:|:--------:|
+        <div align="center">
+        
+        | 👤 Player | 🆚 | 🤖 Computer |
+        |:---------:|:--:|:-----------:|
         | $PLAYER_EMOJI **$PLAYER_NAME** | vs | $COMPUTER_EMOJI **$COMPUTER_NAME** |
         
         ### $RESULT_EMOJI $RESULT_MESSAGE
+        
+        </div>
         
         ---
         
@@ -95,7 +98,11 @@ jobs:
         
         **Thanks for playing! 🎮**
         
-        *This issue will be automatically closed in 30 seconds.*
+        ---
+        
+        <div align="center">
+        <em>This issue will be automatically closed in 10 seconds.</em>
+        </div>
         EOF
         
         echo "result_comment<<EOF" >> $GITHUB_OUTPUT
@@ -105,7 +112,7 @@ jobs:
         echo "result=$RESULT" >> $GITHUB_OUTPUT
         
     - name: Comment on issue
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
           const comment = `${{ steps.game.outputs.result_comment }}`;
@@ -118,11 +125,11 @@ jobs:
           });
           
     - name: Close issue
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
-          // Wait 30 seconds before closing
-          await new Promise(resolve => setTimeout(resolve, 30000));
+          // Wait 10 seconds before closing
+          await new Promise(resolve => setTimeout(resolve, 10000));
           
           await github.rest.issues.update({
             owner: context.repo.owner,
@@ -130,9 +137,3 @@ jobs:
             issue_number: context.issue.number,
             state: 'closed'
           });
-          
-    - name: Update README stats
-      run: |
-        # This would update game statistics in README
-        # You can implement this part to track wins/losses
-        echo "Game completed: ${{ steps.game.outputs.result }}"
