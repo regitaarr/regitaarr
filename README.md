@@ -290,6 +290,6 @@ console.log("Every line of code tells a story 📖✨");
 - 🎯 Currently exploring **Mobile Development** with Flutter
 - 🌱 Always learning new technologies and frameworks
 - 🎮 I like playing Mobile Legends, this is my ID {1275866107}. Let's play together
-- ⚡ Fun fact: I speak multiple programming languages fluently and I can speak 2 regional languages, namely Sundanese and Javanese!
+- ⚡ Fun fact: I can speak 2 regional languages, namely Sundanese and Javanese!
 
 </div>
