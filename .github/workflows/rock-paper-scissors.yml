@@ -1,0 +1,138 @@
+name: 🎮 Rock Paper Scissors Game
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  play-game:
+    if: |
+      contains(github.event.issue.title, '🗿') || 
+      contains(github.event.issue.title, '📄') || 
+      contains(github.event.issue.title, '✂️')
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Play Rock Paper Scissors
+      id: game
+      run: |
+        # Determine player choice
+        TITLE="${{ github.event.issue.title }}"
+        if [[ "$TITLE" == *"🗿"* ]]; then
+          PLAYER_CHOICE="rock"
+          PLAYER_EMOJI="🗿"
+          PLAYER_NAME="ROCK"
+        elif [[ "$TITLE" == *"📄"* ]]; then
+          PLAYER_CHOICE="paper"
+          PLAYER_EMOJI="📄"
+          PLAYER_NAME="PAPER"
+        elif [[ "$TITLE" == *"✂️"* ]]; then
+          PLAYER_CHOICE="scissors"
+          PLAYER_EMOJI="✂️"
+          PLAYER_NAME="SCISSORS"
+        fi
+        
+        # Computer makes random choice
+        CHOICES=("rock" "paper" "scissors")
+        EMOJIS=("🗿" "📄" "✂️")
+        NAMES=("ROCK" "PAPER" "SCISSORS")
+        
+        RANDOM_INDEX=$((RANDOM % 3))
+        COMPUTER_CHOICE=${CHOICES[$RANDOM_INDEX]}
+        COMPUTER_EMOJI=${EMOJIS[$RANDOM_INDEX]}
+        COMPUTER_NAME=${NAMES[$RANDOM_INDEX]}
+        
+        # Determine winner
+        if [[ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]]; then
+          RESULT="DRAW"
+          RESULT_EMOJI="🤝"
+          RESULT_MESSAGE="It's a tie! Great minds think alike! 🤝"
+        elif [[ 
+          ("$PLAYER_CHOICE" == "rock" && "$COMPUTER_CHOICE" == "scissors") ||
+          ("$PLAYER_CHOICE" == "paper" && "$COMPUTER_CHOICE" == "rock") ||
+          ("$PLAYER_CHOICE" == "scissors" && "$COMPUTER_CHOICE" == "paper")
+        ]]; then
+          RESULT="WIN"
+          RESULT_EMOJI="🎉"
+          RESULT_MESSAGE="🎉 **CONGRATULATIONS!** 🎉 You won this round!"
+        else
+          RESULT="LOSE"
+          RESULT_EMOJI="💔"
+          RESULT_MESSAGE="💔 **OOPS!** 💔 Computer wins this time. Try again!"
+        fi
+        
+        # Create game result comment
+        cat > game_result.md << EOF
+        ## 🎮 Game Result
+        
+        | Player | vs | Computer |
+        |:------:|:--:|:--------:|
+        | $PLAYER_EMOJI **$PLAYER_NAME** | vs | $COMPUTER_EMOJI **$COMPUTER_NAME** |
+        
+        ### $RESULT_EMOJI $RESULT_MESSAGE
+        
+        ---
+        
+        ## 📊 Round Details
+        - **Your Choice:** $PLAYER_EMOJI $PLAYER_NAME
+        - **Computer Choice:** $COMPUTER_EMOJI $COMPUTER_NAME  
+        - **Result:** $RESULT_EMOJI **$RESULT**
+        - **Game Time:** $(date '+%Y-%m-%d %H:%M:%S UTC')
+        
+        ---
+        
+        ## 🎯 Want to Play Again?
+        
+        Go back to [my profile](https://github.com/${{ github.repository_owner }}) and click another button!
+        
+        **Thanks for playing! 🎮**
+        
+        *This issue will be automatically closed in 30 seconds.*
+        EOF
+        
+        echo "result_comment<<EOF" >> $GITHUB_OUTPUT
+        cat game_result.md >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+        echo "result=$RESULT" >> $GITHUB_OUTPUT
+        
+    - name: Comment on issue
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const comment = `${{ steps.game.outputs.result_comment }}`;
+          
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body: comment
+          });
+          
+    - name: Close issue
+      uses: actions/github-script@v6
+      with:
+        script: |
+          // Wait 30 seconds before closing
+          await new Promise(resolve => setTimeout(resolve, 30000));
+          
+          await github.rest.issues.update({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            state: 'closed'
+          });
+          
+    - name: Update README stats
+      run: |
+        # This would update game statistics in README
+        # You can implement this part to track wins/losses
+        echo "Game completed: ${{ steps.game.outputs.result }}"
