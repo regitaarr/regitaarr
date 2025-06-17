@@ -1,4 +1,8 @@
-<!-- Rock Paper Scissors -->
-[![Rock](https://img.shields.io/badge/Rock-🗿-lightgrey?style=for-the-badge)](https://github.com/USERNAME/USERNAME/issues/new?title=🗿&body=You%20played%20Rock!)
-[![Paper](https://img.shields.io/badge/Paper-📄-lightgrey?style=for-the-badge)](https://github.com/USERNAME/USERNAME/issues/new?title=📄&body=You%20played%20Paper!)
-[![Scissors](https://img.shields.io/badge/Scissors-✂️-lightgrey?style=for-the-badge)](https://github.com/USERNAME/USERNAME/issues/new?title=✂️&body=You%20played%20Scissors!)
+<!-- GitHub Stats -->
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=radical)
+
+<!-- Top Languages -->
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=radical)
+
+<!-- GitHub Streak -->
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=USERNAME&theme=radical)
