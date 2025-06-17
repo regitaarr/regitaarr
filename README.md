@@ -10,7 +10,7 @@
 
 </div>
 
-## 🚀 Language Arsenal
+## 🚀 Language
 
 <table>
 <tr>
@@ -50,7 +50,7 @@ def skills():
 **🎯 Projects:**
 - 🎮 **Rock Paper Scissors** - Interactive Game
 - 🐍 **Snake Game** - HTML5 Canvas
-- 🍜 **SVT Store** - Album Shop Website
+- 🏬 **SVT Store** - Album Shop Website
 - 👤 **Jennie Profile** - Personal Website
 - 🏘️ **RW Hub** - Community Management
 
@@ -289,7 +289,7 @@ console.log("Every line of code tells a story 📖✨");
 - 📍 Based in **Ciamis, Indonesia**
 - 🎯 Currently exploring **Mobile Development** with Flutter
 - 🌱 Always learning new technologies and frameworks
-- 🎮 I like playing mobile legends, this is my ID 1275866107. Let's play together
+- 🎮 I like playing Mobile Legends, this is my ID {1275866107}. Let's play together
 - ⚡ Fun fact: I speak multiple programming languages fluently and I can speak 2 regional languages, namely Sundanese and Javanese!
 
 </div>
