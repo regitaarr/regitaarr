@@ -1,4 +1,4 @@
-name: 🎮 Rock Paper Scissors Game - Simple
+name: 🎮 Rock Paper Scissors Game
 
 on:
   issues:
@@ -13,37 +13,44 @@ jobs:
     if: |
       contains(github.event.issue.title, '🗿') || 
       contains(github.event.issue.title, '📄') || 
-      contains(github.event.issue.title, '✂️')
+      contains(github.event.issue.title, '✂️') ||
+      contains(github.event.issue.title, 'Rock') || 
+      contains(github.event.issue.title, 'Paper') || 
+      contains(github.event.issue.title, 'Scissors')
     runs-on: ubuntu-latest
     
     steps:
-    - name: Debug Issue Info
+    - name: Debug Issue
       run: |
         echo "Issue Title: ${{ github.event.issue.title }}"
+        echo "Issue Body: ${{ github.event.issue.body }}"
         echo "Repository: ${{ github.repository }}"
-        echo "Issue Number: ${{ github.event.issue.number }}"
         
     - name: Play Rock Paper Scissors
       id: game
       run: |
-        # Determine player choice
+        # Determine player choice from title
         TITLE="${{ github.event.issue.title }}"
-        if [[ "$TITLE" == *"🗿"* ]]; then
+        echo "Processing title: $TITLE"
+        
+        if [[ "$TITLE" == *"🗿"* ]] || [[ "$TITLE" == *"Rock"* ]] || [[ "$TITLE" == *"rock"* ]]; then
           PLAYER_CHOICE="rock"
           PLAYER_EMOJI="🗿"
           PLAYER_NAME="ROCK"
-        elif [[ "$TITLE" == *"📄"* ]]; then
+        elif [[ "$TITLE" == *"📄"* ]] || [[ "$TITLE" == *"Paper"* ]] || [[ "$TITLE" == *"paper"* ]]; then
           PLAYER_CHOICE="paper"
           PLAYER_EMOJI="📄"
           PLAYER_NAME="PAPER"
-        elif [[ "$TITLE" == *"✂️"* ]]; then
+        elif [[ "$TITLE" == *"✂️"* ]] || [[ "$TITLE" == *"Scissors"* ]] || [[ "$TITLE" == *"scissors"* ]]; then
           PLAYER_CHOICE="scissors"
           PLAYER_EMOJI="✂️"
           PLAYER_NAME="SCISSORS"
         else
-          echo "No valid choice found in title"
+          echo "No valid choice found in title: $TITLE"
           exit 1
         fi
+        
+        echo "Player chose: $PLAYER_NAME"
         
         # Computer makes random choice
         CHOICES=("rock" "paper" "scissors")
@@ -55,7 +62,7 @@ jobs:
         COMPUTER_EMOJI=${EMOJIS[$RANDOM_INDEX]}
         COMPUTER_NAME=${NAMES[$RANDOM_INDEX]}
         
-        echo "Player: $PLAYER_NAME, Computer: $COMPUTER_NAME"
+        echo "Computer chose: $COMPUTER_NAME"
         
         # Determine winner
         if [[ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]]; then
@@ -76,7 +83,9 @@ jobs:
           RESULT_MESSAGE="💔 **OOPS!** 💔 Computer wins this time. Try again!"
         fi
         
-        # Store results for next step
+        echo "Result: $RESULT"
+        
+        # Save outputs
         echo "player_emoji=$PLAYER_EMOJI" >> $GITHUB_OUTPUT
         echo "player_name=$PLAYER_NAME" >> $GITHUB_OUTPUT
         echo "computer_emoji=$COMPUTER_EMOJI" >> $GITHUB_OUTPUT
@@ -85,33 +94,64 @@ jobs:
         echo "result_message=$RESULT_MESSAGE" >> $GITHUB_OUTPUT
         echo "result=$RESULT" >> $GITHUB_OUTPUT
         
-    - name: Comment on issue
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        COMMENT="## 🎮 Game Result
+    - name: Comment Game Result
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const comment = `## 🎮 Game Result
 
-        | 👤 Player | 🆚 | 🤖 Computer |
-        |:---------:|:--:|:-----------:|
-        | ${{ steps.game.outputs.player_emoji }} **${{ steps.game.outputs.player_name }}** | vs | ${{ steps.game.outputs.computer_emoji }} **${{ steps.game.outputs.computer_name }}** |
-        
-        ### ${{ steps.game.outputs.result_emoji }} ${{ steps.game.outputs.result_message }}
-        
-        **Thanks for playing! 🎮**"
-        
-        curl -X POST \
-          -H "Authorization: token $GITHUB_TOKEN" \
-          -H "Accept: application/vnd.github.v3+json" \
-          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
-          -d "{\"body\":\"$COMMENT\"}"
+          <div align="center">
           
-    - name: Close issue after delay
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        sleep 10
-        curl -X PATCH \
-          -H "Authorization: token $GITHUB_TOKEN" \
-          -H "Accept: application/vnd.github.v3+json" \
-          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
-          -d '{"state":"closed"}'
+          | 👤 Player | 🆚 | 🤖 Computer |
+          |:---------:|:--:|:-----------:|
+          | ${{ steps.game.outputs.player_emoji }} **${{ steps.game.outputs.player_name }}** | vs | ${{ steps.game.outputs.computer_emoji }} **${{ steps.game.outputs.computer_name }}** |
+          
+          ### ${{ steps.game.outputs.result_emoji }} ${{ steps.game.outputs.result_message }}
+          
+          </div>
+          
+          ---
+          
+          ## 📊 Round Details
+          - **Your Choice:** ${{ steps.game.outputs.player_emoji }} ${{ steps.game.outputs.player_name }}
+          - **Computer Choice:** ${{ steps.game.outputs.computer_emoji }} ${{ steps.game.outputs.computer_name }}
+          - **Result:** ${{ steps.game.outputs.result_emoji }} **${{ steps.game.outputs.result }}**
+          - **Game Time:** ${new Date().toISOString()}
+          
+          ---
+          
+          ## 🎯 Want to Play Again?
+          
+          Go back to [my profile](https://github.com/${{ github.repository_owner }}) and click another button!
+          
+          **Thanks for playing! 🎮**
+          
+          ---
+          
+          <div align="center">
+          <em>This issue will be automatically closed in 10 seconds.</em>
+          </div>`;
+          
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body: comment
+          });
+          
+    - name: Wait and Close Issue
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          // Wait 10 seconds
+          await new Promise(resolve => setTimeout(resolve, 10000));
+          
+          // Close the issue
+          await github.rest.issues.update({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            state: 'closed'
+          });
