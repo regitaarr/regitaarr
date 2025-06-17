@@ -1,141 +1,14 @@
-name: 🎮 Rock Paper Scissors Game
+name: Test Workflow
 
 on:
   issues:
     types: [opened]
 
-permissions:
-  issues: write
-  contents: read
-
 jobs:
-  play-game:
-    if: |
-      contains(github.event.issue.title, '🗿') || 
-      contains(github.event.issue.title, '📄') || 
-      contains(github.event.issue.title, '✂️')
+  test:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Play Rock Paper Scissors
-      id: game
+    - name: Test
       run: |
-        # Determine player choice
-        TITLE="${{ github.event.issue.title }}"
-        if [[ "$TITLE" == *"🗿"* ]]; then
-          PLAYER_CHOICE="rock"
-          PLAYER_EMOJI="🗿"
-          PLAYER_NAME="ROCK"
-        elif [[ "$TITLE" == *"📄"* ]]; then
-          PLAYER_CHOICE="paper"
-          PLAYER_EMOJI="📄"
-          PLAYER_NAME="PAPER"
-        elif [[ "$TITLE" == *"✂️"* ]]; then
-          PLAYER_CHOICE="scissors"
-          PLAYER_EMOJI="✂️"
-          PLAYER_NAME="SCISSORS"
-        fi
-        
-        # Computer makes random choice
-        CHOICES=("rock" "paper" "scissors")
-        EMOJIS=("🗿" "📄" "✂️")
-        NAMES=("ROCK" "PAPER" "SCISSORS")
-        
-        RANDOM_INDEX=$((RANDOM % 3))
-        COMPUTER_CHOICE=${CHOICES[$RANDOM_INDEX]}
-        COMPUTER_EMOJI=${EMOJIS[$RANDOM_INDEX]}
-        COMPUTER_NAME=${NAMES[$RANDOM_INDEX]}
-        
-        # Determine winner
-        if [[ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]]; then
-          RESULT="DRAW"
-          RESULT_EMOJI="🤝"
-          RESULT_MESSAGE="It's a tie! Great minds think alike!"
-        elif [[ 
-          ("$PLAYER_CHOICE" == "rock" && "$COMPUTER_CHOICE" == "scissors") ||
-          ("$PLAYER_CHOICE" == "paper" && "$COMPUTER_CHOICE" == "rock") ||
-          ("$PLAYER_CHOICE" == "scissors" && "$COMPUTER_CHOICE" == "paper")
-        ]]; then
-          RESULT="WIN"
-          RESULT_EMOJI="🎉"
-          RESULT_MESSAGE="🎉 **CONGRATULATIONS!** 🎉 You won this round!"
-        else
-          RESULT="LOSE"
-          RESULT_EMOJI="💔"
-          RESULT_MESSAGE="💔 **OOPS!** 💔 Computer wins this time. Try again!"
-        fi
-        
-        # Create game result comment
-        cat > game_result.md << EOF
-        ## 🎮 Game Result
-        
-        <div align="center">
-        
-        | 👤 Player | 🆚 | 🤖 Computer |
-        |:---------:|:--:|:-----------:|
-        | $PLAYER_EMOJI **$PLAYER_NAME** | vs | $COMPUTER_EMOJI **$COMPUTER_NAME** |
-        
-        ### $RESULT_EMOJI $RESULT_MESSAGE
-        
-        </div>
-        
-        ---
-        
-        ## 📊 Round Details
-        - **Your Choice:** $PLAYER_EMOJI $PLAYER_NAME
-        - **Computer Choice:** $COMPUTER_EMOJI $COMPUTER_NAME  
-        - **Result:** $RESULT_EMOJI **$RESULT**
-        - **Game Time:** $(date '+%Y-%m-%d %H:%M:%S UTC')
-        
-        ---
-        
-        ## 🎯 Want to Play Again?
-        
-        Go back to [my profile](https://github.com/${{ github.repository_owner }}) and click another button!
-        
-        **Thanks for playing! 🎮**
-        
-        ---
-        
-        <div align="center">
-        <em>This issue will be automatically closed in 10 seconds.</em>
-        </div>
-        EOF
-        
-        echo "result_comment<<EOF" >> $GITHUB_OUTPUT
-        cat game_result.md >> $GITHUB_OUTPUT
-        echo "EOF" >> $GITHUB_OUTPUT
-        
-        echo "result=$RESULT" >> $GITHUB_OUTPUT
-        
-    - name: Comment on issue
-      uses: actions/github-script@v7
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const comment = `${{ steps.game.outputs.result_comment }}`;
-          
-          await github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            body: comment
-          });
-          
-    - name: Wait before closing
-      run: sleep 10
-      
-    - name: Close issue
-      uses: actions/github-script@v7
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          await github.rest.issues.update({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            state: 'closed'
-          });
+        echo "Workflow is working!"
+        echo "Issue title: ${{ github.event.issue.title }}"
