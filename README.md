@@ -10,11 +10,11 @@ Mainkan game langsung di profil GitHub! Klik salah satu pilihan di bawah:
 
 ## 🗿📄✂️ Pilih Senjata Anda!
 
-[![Rock](https://img.shields.io/badge/🗿_ROCK-Click_to_Play-ff6b6b?style=for-the-badge&labelColor=2c3e50)](https://github.com/USERNAME/USERNAME/issues/new?title=🗿%20Rock%20vs%20Computer&body=**Anda%20memilih%3A%20🗿%20ROCK**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
+[![Rock](https://img.shields.io/badge/🗿_ROCK-Click_to_Play-ff6b6b?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=🗿%20Rock%20vs%20Computer&body=**Anda%20memilih%3A%20🗿%20ROCK**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
 
-[![Paper](https://img.shields.io/badge/📄_PAPER-Click_to_Play-4ecdc4?style=for-the-badge&labelColor=2c3e50)](https://github.com/USERNAME/USERNAME/issues/new?title=📄%20Paper%20vs%20Computer&body=**Anda%20memilih%3A%20📄%20PAPER**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
+[![Paper](https://img.shields.io/badge/📄_PAPER-Click_to_Play-4ecdc4?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=📄%20Paper%20vs%20Computer&body=**Anda%20memilih%3A%20📄%20PAPER**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
 
-[![Scissors](https://img.shields.io/badge/✂️_SCISSORS-Click_to_Play-f39c12?style=for-the-badge&labelColor=2c3e50)](https://github.com/USERNAME/USERNAME/issues/new?title=✂️%20Scissors%20vs%20Computer&body=**Anda%20memilih%3A%20✂️%20SCISSORS**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
+[![Scissors](https://img.shields.io/badge/✂️_SCISSORS-Click_to_Play-f39c12?style=for-the-badge&labelColor=2c3e50)](https://github.com/regitarr/regitarr/issues/new?title=✂️%20Scissors%20vs%20Computer&body=**Anda%20memilih%3A%20✂️%20SCISSORS**%0A%0AKomputer%20sedang%20berpikir...%0A%0A---%0A%0A*Tutup%20issue%20ini%20setelah%20melihat%20hasil!*%0A%0A**Game%20Stats%3A**%0A-%20Total%20Games%3A%20%0A-%20Wins%3A%20%0A-%20Losses%3A%20%0A-%20Draws%3A%20)
 
 </div>
 
