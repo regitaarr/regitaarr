@@ -281,7 +281,7 @@ console.log("Every line of code tells a story 📖✨");
 
 ---
 
-<div align="center">
+<div align="left">
 
 ### 🔥 **Fun Facts**
 
