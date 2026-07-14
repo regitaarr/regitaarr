@@ -1,3 +1,30 @@
+<div align="center">
+
+# 👋 Hi, I'm Regita
+
+### Frontend Developer • Mobile Developer • UI/UX Enthusiast
+
+<p>
+<a href="https://regitaarr.github.io/portofolio/">
+<img src="https://img.shields.io/badge/🌐_Portfolio-Visit_Website-8A2BE2?style=for-the-badge" />
+</a>
+
+<a href="https://github.com/regitaarr">
+<img src="https://img.shields.io/badge/GitHub-regitaarr-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="https://linkedin.com/in/regitaarr">
+<img src="https://img.shields.io/badge/LinkedIn-Regita-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="mailto:cahyaregita1412@gmail.com">
+<img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+</p>
+
+<img src="https://komarev.com/ghpvc/?username=regitaarr&label=Profile%20Views&color=8A2BE2&style=for-the-badge" />
+
+</div>
 # 💻 Tech Stack & Languages
 
 > *"Polyglot programmer - speaking fluent code in multiple languages"* 🌐✨
