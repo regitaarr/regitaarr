@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Regita
 
-### Frontend Developer • Mobile Developer • UI/UX Enthusiast
+### Frontend Developer  • Web Developer • Mobile Developer • UI/UX Enthusiast
 
 <p>
 <a href="https://regitaarr.github.io/portofolio/">
