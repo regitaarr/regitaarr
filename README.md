@@ -312,7 +312,7 @@ console.log("Every line of code tells a story 📖✨");
 
 ### 🔥 **Fun Facts**
 
-- 🎓 Student at **Universitas Teknologi Yogyakarta**
+- 🎓 Fresh Graduate | Bachelor of Computer Science | Universitas Teknologi Yogyakarta
 - 📍 Based in **Ciamis, Indonesia**
 - 🎯 Currently exploring **Mobile Development** with Flutter
 - 🌱 Always learning new technologies and frameworks
