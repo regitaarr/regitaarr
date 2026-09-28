@@ -17,7 +17,7 @@
 <img src="https://img.shields.io/badge/LinkedIn-Regita-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 
-<a href="mailto:cahyaregita1412@gmail.com">
+<a href="mailto:workwithregita@gmail.com">
 <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 </p>
@@ -54,10 +54,10 @@ def skills():
 ```
 
 **🎯 Projects:**
-- 🏢 **Penerimaan Karyawan** - HR Management System
-- 🛍️ **SISTEM SMTOWN APP** - E-commerce Platform  
-- 📊 **SITORSI-SDA** - Inventory Management
-- 📋 **GUI Program** - Data Structure Practice
+- 🏫 **Smart Presensee** - Face Recognition Attendance
+- 💵 **BayARRA!:** - Point of Sale (POS) system for stores
+- 🏢 **Penerimaan Karyawan** - HR Management System Logic Flow
+- 📊 **SIDAK Sinduadi** - Population Data Management System
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
