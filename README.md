@@ -54,10 +54,10 @@ def skills():
 ```
 
 **🎯 Projects:**
-- 🏫 **Smart Presensee** - Face Recognition Attendance
-- 💵 **BayARRA!:** - Point of Sale (POS) system for stores
-- 🏢 **Penerimaan Karyawan** - HR Management System Logic Flow
-- 📊 **SIDAK Sinduadi** - Population Data Management System
+- 🛍️ **SISTEM SMTOWN APP** - E-commerce Platform
+- 📊 **SITORSI-SDA** - Inventory Management
+- 📋 **GUI Program** - Data Structure Practice
+- 🏢 **Penerimaan Karyawan** - HR Management System Logic Flow 
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
@@ -80,6 +80,8 @@ def skills():
 - 🏬 **SVT Store** - Album Shop Website
 - 👤 **Jennie Profile** - Personal Website
 - 🏘️ **RW Hub** - Community Management
+- 📊 **SIDAK Sinduadi** - Population Data Management System
+- 💵 **BayARRA!:** - Point of Sale (POS) system for stores
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -99,7 +101,7 @@ class MobileDev {
 ```
 
 **🎯 Projects:**
-- ✅ **Smart Presence** - Attendance System
+- ✅ **Smart Presensee** - Face Recognition Attendance
 - 🍜 **Kawaii Ramen** - Restaurant App
 - 🛡️ **SiKerja App** - Safety Management
 - 💬 **OTP Fonnte** - SMS Integration
@@ -314,7 +316,6 @@ console.log("Every line of code tells a story 📖✨");
 
 - 🎓 Fresh Graduate | Bachelor of Computer Science | Universitas Teknologi Yogyakarta
 - 📍 Based in **Ciamis, Indonesia**
-- 🎯 Currently exploring **Mobile Development** with Flutter
 - 🌱 Always learning new technologies and frameworks
 - 🎮 I like playing Mobile Legends, this is my ID {1275866107}. Let's play together
 - ⚡ Fun fact: I can speak 2 regional languages, namely Sundanese and Javanese!
