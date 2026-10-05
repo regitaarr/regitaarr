@@ -60,12 +60,17 @@ Bukan NPC, cuma seorang Front-End & Mobile Developer yang lagi *grinding exp* di
 <td width="33%">
 <b>🐍 Python</b><br>
 
+```python
 def skills():
     return {
         "level": "Advanced",
         "projects": 4,
         "focus": ["Algorithms", "Data"]
     }
+
+```
+
+
 
 🎯 Projects:
 
@@ -89,11 +94,16 @@ def skills():
 
 🏢 Penerimaan Karyawan
 
+```html
 <div class="web-stack">
     <span>HTML5</span> +
     <span>CSS3</span> +
     <span>JS</span> + <span>PHP</span>
 </div>
+
+```
+
+
 
 🎯 Projects:
 
@@ -117,11 +127,13 @@ def skills():
 
 💵 BayARRA! (POS system)
 
-
+```dart
 class MobileDev {
   String framework = "Flutter";
   String language = "Dart";
 }
+
+```
 
 
 
@@ -161,7 +173,7 @@ class MobileDev {
 
 ### 💫 [ CODE PHILOSOPHY ] 💭
 
-
+```javascript
 const developer = {
     name: "regitaarr",
     motto: "Clean code, creative solutions 💅",
@@ -170,3 +182,5 @@ const developer = {
     quote: "Life is a game, code is the cheat code! 🎮✨"
 };
 console.log("Every line of code tells a story 📖✨");
+
+```
