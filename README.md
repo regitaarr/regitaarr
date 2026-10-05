@@ -7,9 +7,9 @@
   <img src="hello.gif" width="150" alt="Hello Cat Animation" />
 </div>
 
-### <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> Woylah, Welcome to My Coquette Code Era! 🎀💅
+### <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> Haloo besst, Welcome to My Github Profile! 🎀💅
 
-Bukan NPC, cuma seorang Front-End & Mobile Developer dari Ciamis yang lagi *grinding exp* di dunia nyata. Sering nulis *bug*, kadang nulis kode. *Skill issue*? Tinggal Googling abies 🗿. "Polyglot programmer - speaking fluent code in multiple languages" 🌐✨
+Bukan NPC, cuma seorang Front-End & Mobile Developer yang lagi *grinding exp* di dunia nyata. Sering nulis *bug*, kadang nulis kode. *Skill issue*? Tinggal Googling abies 🗿. "Polyglot programmer - speaking fluent code in multiple languages" 🌐✨
 
 <div align="center">
   <a href="https://regitaarr.github.io/portofolio/">
