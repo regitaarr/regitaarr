@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff9a9e,fecfef&height=250&section=header&&text=Regita%20Cahya%20Arrahma%20&fontSize=50&fontAlignY=35&desc=Front-end%20Developer%20-%20Web%20%26%20Mobile%20Developer&descAlignY=55&descAlign=50&fontColor=ffffff" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff9a9e,fecfef&height=250&section=header&text=PRESS%20START%20▶&fontSize=50&fontAlignY=35&desc=Front-end%20Developer%20-%20Web%20%26%20Mobile%20Developer&descAlignY=55&descAlign=50&fontColor=ffffff" />
 </div>
 
 <!-- ✨ Animasi Kucing Lucu ✨ -->
