@@ -1,5 +1,6 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff9a9e,fecfef&height=250&section=header&text=PRESS%20START%20▶️&fontSize=50&fontAlignY=35&desc=Player%201:%20Regita%20has%20entered%20the%20pink%20server%20🎀&descAlignY=55&descAlign=50&fontColor=ffffff" />
+  <iframe src="https://assets.pinterest.com/ext/embed.html?id=825777281727772807" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
 </div>
 
 <!-- ✨ Animasi Kucing Piksel Pink ✨ -->
