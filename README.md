@@ -21,6 +21,9 @@ Bukan NPC, cuma seorang Front-End & Mobile Developer yang lagi *grinding exp* di
   <a href="https://linkedin.com/in/regitaarr">
     <img src="https://img.shields.io/badge/LinkedIn-Regita-FFB6C1?style=for-the-badge&logo=linkedin&logoColor=black" />
   </a>
+  <a href="https://instagram.com/regitaarr">
+    <img src="https://img.shields.io/badge/Instagram-regitaarr-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
   <a href="mailto:workwithregita@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-FF1493?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
@@ -57,7 +60,6 @@ Bukan NPC, cuma seorang Front-End & Mobile Developer yang lagi *grinding exp* di
 <td width="33%">
 <b>🐍 Python</b><br>
 
-```python
 def skills():
     return {
         "level": "Advanced",
@@ -66,12 +68,27 @@ def skills():
     }
 
 🎯 Projects:
+
+
+
+
 🛍️ SISTEM SMTOWN APP (E-commerce)
+
+
+
+
 📊 SITORSI-SDA (Inventory)
+
+
+
+
 📋 GUI Program
+
+
+
+
 🏢 Penerimaan Karyawan
 
-HTML
 <div class="web-stack">
     <span>HTML5</span> +
     <span>CSS3</span> +
@@ -79,42 +96,72 @@ HTML
 </div>
 
 🎯 Projects:
+
+
+
+
 🎮 Rock Paper Scissors (Game)
+
+
+
+
 🐍 Snake Game (Canvas)
+
+
+
+
 🏬 SVT Store (Web)
+
+
+
+
 💵 BayARRA! (POS system)
 
-Dart
+
 class MobileDev {
   String framework = "Flutter";
   String language = "Dart";
 }
 
+
+
 🎯 Projects:
+
+
+
+
 ✅ Smart Presensee (Face Recog)
+
+
+
+
 🍜 Kawaii Ramen (App)
+
+
+
+
 🛡️ SiKerja App (Safety)
+
+
+
+
 💬 OTP Fonnte
 
-🎮 [ MINI GAMES COLLECTION ] 🕹️
-"Code is poetry, games are the rhythm" ✨
+### 🎮 [ MINI GAMES COLLECTION ] 🕹️
 
-🎮 Games & Interactive: Snake Game, Rock Paper Scissors
+*"Code is poetry, games are the rhythm"* ✨
 
-🏢 Business Applications: Penerimaan Karyawan, SISTEM SMTOWN APP, Manajemen Data Toko, BayARRA! POS System
+* **🎮 Games & Interactive:** Snake Game, Rock Paper Scissors
+* **🏢 Business Applications:** Penerimaan Karyawan, SISTEM SMTOWN APP, Manajemen Data Toko, BayARRA! POS System
+* **📱 Mobile Applications:** Smart Presensee (Face-recognition Google ML Kit), Kawaii Ramen, SiKerja App, OTP Fonnte
+* **🌐 Web Development:** Feeding Oyon, Jennie Profile, YG Ent Profile, RW Hub, SVT Store, SIDAK Sinduadi
+* **🔧 System & Utilities:** SITORSI-SDA, GUI Program Data Structure
 
-📱 Mobile Applications: Smart Presensee (Face-recognition Google ML Kit), Kawaii Ramen, SiKerja App, OTP Fonnte
+### 💖 [ GITHUB STATS / EXP BAR ] 📈
 
-🌐 Web Development: Feeding Oyon, Jennie Profile, YG Ent Profile, RW Hub, SVT Store, SIDAK Sinduadi
+### 💫 [ CODE PHILOSOPHY ] 💭
 
-🔧 System & Utilities: SITORSI-SDA, GUI Program Data Structure
 
-🎀 [ MY AESTHETIC VIBES ] 🎀
-(Klik gambar untuk teleport ke Pinterest aku! ✨)
-
-💖 [ GITHUB STATS / EXP BAR ] 📈
-💫 [ CODE PHILOSOPHY ] 💭
-JavaScript
 const developer = {
     name: "regitaarr",
     motto: "Clean code, creative solutions 💅",
