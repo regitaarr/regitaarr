@@ -1,11 +1,10 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff9a9e,fecfef&height=250&section=header&text=PRESS%20START%20▶️&fontSize=50&fontAlignY=35&desc=Player%201:%20Regita%20has%20entered%20the%20pink%20server%20🎀&descAlignY=55&descAlign=50&fontColor=ffffff" />
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=825777281727772807" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff9a9e,fecfef&height=250&section=header&text=PRESS%20START%20▶&fontSize=50&fontAlignY=35&desc=Player%201:%20Regita%20has%20entered%20the%20pink%20server%20🎀&descAlignY=55&descAlign=50&fontColor=ffffff" />
 </div>
 
-<!-- ✨ Animasi Kucing Piksel Pink ✨ -->
+<!-- ✨ Animasi Kucing Lucu ✨ -->
 <div align="center">
-  <img src="https://media.giphy.com/media/xT0xeHWzGhiCbDjiMc/giphy.gif" width="120" alt="Pink Pixel Cat Animation" />
+  <img src="hello.gif" width="150" alt="Hello Cat Animation" />
 </div>
 
 ### <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> Woylah, Welcome to My Coquette Code Era! 🎀💅
@@ -66,26 +65,18 @@ def skills():
         "focus": ["Algorithms", "Data"]
     }
 
-```
-
-
-
 🎯 Projects:
 🛍️ SISTEM SMTOWN APP (E-commerce)
 📊 SITORSI-SDA (Inventory)
 📋 GUI Program
 🏢 Penerimaan Karyawan
 
-```html
+HTML
 <div class="web-stack">
     <span>HTML5</span> +
     <span>CSS3</span> +
     <span>JS</span> + <span>PHP</span>
 </div>
-
-```
-
-
 
 🎯 Projects:
 🎮 Rock Paper Scissors (Game)
@@ -93,15 +84,11 @@ def skills():
 🏬 SVT Store (Web)
 💵 BayARRA! (POS system)
 
-```dart
+Dart
 class MobileDev {
   String framework = "Flutter";
   String language = "Dart";
 }
-
-```
-
-
 
 🎯 Projects:
 ✅ Smart Presensee (Face Recog)
@@ -109,21 +96,25 @@ class MobileDev {
 🛡️ SiKerja App (Safety)
 💬 OTP Fonnte
 
-### 🎮 [ MINI GAMES COLLECTION ] 🕹️
+🎮 [ MINI GAMES COLLECTION ] 🕹️
+"Code is poetry, games are the rhythm" ✨
 
-*"Code is poetry, games are the rhythm"* ✨
+🎮 Games & Interactive: Snake Game, Rock Paper Scissors
 
-* **🎮 Games & Interactive:** Snake Game, Rock Paper Scissors
-* **🏢 Business Applications:** Penerimaan Karyawan, SISTEM SMTOWN APP, Manajemen Data Toko, BayARRA! POS System
-* **📱 Mobile Applications:** Smart Presensee (Face-recognition Google ML Kit), Kawaii Ramen, SiKerja App, OTP Fonnte
-* **🌐 Web Development:** Feeding Oyon, Jennie Profile, YG Ent Profile, RW Hub, SVT Store, SIDAK Sinduadi
-* **🔧 System & Utilities:** SITORSI-SDA, GUI Program Data Structure
+🏢 Business Applications: Penerimaan Karyawan, SISTEM SMTOWN APP, Manajemen Data Toko, BayARRA! POS System
 
-### 💖 [ GITHUB STATS / EXP BAR ] 📈
+📱 Mobile Applications: Smart Presensee (Face-recognition Google ML Kit), Kawaii Ramen, SiKerja App, OTP Fonnte
 
-### 💫 [ CODE PHILOSOPHY ] 💭
+🌐 Web Development: Feeding Oyon, Jennie Profile, YG Ent Profile, RW Hub, SVT Store, SIDAK Sinduadi
 
-```javascript
+🔧 System & Utilities: SITORSI-SDA, GUI Program Data Structure
+
+🎀 [ MY AESTHETIC VIBES ] 🎀
+(Klik gambar untuk teleport ke Pinterest aku! ✨)
+
+💖 [ GITHUB STATS / EXP BAR ] 📈
+💫 [ CODE PHILOSOPHY ] 💭
+JavaScript
 const developer = {
     name: "regitaarr",
     motto: "Clean code, creative solutions 💅",
@@ -132,5 +123,3 @@ const developer = {
     quote: "Life is a game, code is the cheat code! 🎮✨"
 };
 console.log("Every line of code tells a story 📖✨");
-
-```
